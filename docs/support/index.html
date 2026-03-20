@@ -10,74 +10,93 @@
 <div class="container">
 
     <header>
-        <h1>Simple Notes — Ad-Free by Choice</h1>
-        <p>Your support keeps it that way.</p>
+        <h1>Support Simple Notes</h1>
+        <p>No ads. No subscriptions. If you find it useful, a small contribution means a lot.</p>
     </header>
 
-    <!-- CRYPTO -->
-    <section class="section">
-        <h2>Crypto</h2>
-        <div class="crypto-cards">
+    <div class="cards">
 
-            <div class="crypto-card">
-                <div class="qr">
-                    <!-- Replace btc.png with a real QR code image -->
-                    <div class="qr-placeholder">QR<br>BTC</div>
-                </div>
-                <div class="crypto-info">
-                    <div class="crypto-name">Bitcoin (BTC)</div>
-                    <div class="crypto-address" id="addr-btc">YOUR_BTC_ADDRESS</div>
-                    <button class="btn-copy" onclick="copyAddress('addr-btc', this)">Copy</button>
+        <div class="card">
+            <div class="card-main">
+                <img class="logo" src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg" alt="BTC" />
+                <div class="info">
+                    <div class="name">Bitcoin <span class="ticker">BTC</span></div>
+                    <div class="address" id="addr-btc">YOUR_BTC_ADDRESS</div>
                 </div>
             </div>
-
-            <div class="crypto-card">
-                <div class="qr">
-                    <div class="qr-placeholder">QR<br>ETH</div>
-                </div>
-                <div class="crypto-info">
-                    <div class="crypto-name">Ethereum (ETH)</div>
-                    <div class="crypto-address" id="addr-eth">YOUR_ETH_ADDRESS</div>
-                    <button class="btn-copy" onclick="copyAddress('addr-eth', this)">Copy</button>
-                </div>
+            <div class="card-actions">
+                <button class="btn-copy" onclick="copyAddress('addr-btc', this)">Copy address</button>
+                <a class="btn-wallet" href="bitcoin:YOUR_BTC_ADDRESS">Open in wallet</a>
+                <button class="btn-qr" onclick="toggleQR(this, 'addr-btc', 'qr-btc')">Show QR code</button>
             </div>
-
-            <div class="crypto-card">
-                <div class="qr">
-                    <div class="qr-placeholder">QR<br>USDT</div>
-                </div>
-                <div class="crypto-info">
-                    <div class="crypto-name">Tether (USDT) <span class="crypto-network">ERC-20</span></div>
-                    <div class="crypto-address" id="addr-usdt">YOUR_ETH_ADDRESS</div>
-                    <button class="btn-copy" onclick="copyAddress('addr-usdt', this)">Copy</button>
-                </div>
-            </div>
-
-            <div class="crypto-card">
-                <div class="qr">
-                    <div class="qr-placeholder">QR<br>USDC</div>
-                </div>
-                <div class="crypto-info">
-                    <div class="crypto-name">USD Coin (USDC) <span class="crypto-network">ERC-20</span></div>
-                    <div class="crypto-address" id="addr-usdc">YOUR_ETH_ADDRESS</div>
-                    <button class="btn-copy" onclick="copyAddress('addr-usdc', this)">Copy</button>
-                </div>
-            </div>
-
-            <div class="crypto-card">
-                <div class="qr">
-                    <!-- Replace xmr.png with a real QR code image -->
-                    <div class="qr-placeholder">QR<br>XMR</div>
-                </div>
-                <div class="crypto-info">
-                    <div class="crypto-name">Monero (XMR)</div>
-                    <div class="crypto-address" id="addr-xmr">YOUR_XMR_ADDRESS</div>
-                    <button class="btn-copy" onclick="copyAddress('addr-xmr', this)">Copy</button>
-                </div>
-            </div>
-
+            <div class="qr-wrap" id="qr-btc"></div>
         </div>
-    </section>
+
+        <div class="card">
+            <div class="card-main">
+                <img class="logo" src="https://cryptologos.cc/logos/ethereum-eth-logo.svg" alt="ETH" />
+                <div class="info">
+                    <div class="name">Ethereum <span class="ticker">ETH</span></div>
+                    <div class="address" id="addr-eth">YOUR_ETH_ADDRESS</div>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="btn-copy" onclick="copyAddress('addr-eth', this)">Copy address</button>
+                <a class="btn-wallet" href="ethereum:YOUR_ETH_ADDRESS">Open in wallet</a>
+                <button class="btn-qr" onclick="toggleQR(this, 'addr-eth', 'qr-eth')">Show QR code</button>
+            </div>
+            <div class="qr-wrap" id="qr-eth"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-main">
+                <img class="logo" src="https://cryptologos.cc/logos/tether-usdt-logo.svg" alt="USDT" />
+                <div class="info">
+                    <div class="name">Tether <span class="ticker">USDT</span> <span class="network">ERC-20</span></div>
+                    <div class="address" id="addr-usdt">YOUR_ETH_ADDRESS</div>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="btn-copy" onclick="copyAddress('addr-usdt', this)">Copy address</button>
+                <a class="btn-wallet" href="ethereum:YOUR_ETH_ADDRESS">Open in wallet</a>
+                <button class="btn-qr" onclick="toggleQR(this, 'addr-usdt', 'qr-usdt')">Show QR code</button>
+            </div>
+            <div class="qr-wrap" id="qr-usdt"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-main">
+                <img class="logo" src="https://cryptologos.cc/logos/usd-coin-usdc-logo.svg" alt="USDC" />
+                <div class="info">
+                    <div class="name">USD Coin <span class="ticker">USDC</span> <span class="network">ERC-20</span></div>
+                    <div class="address" id="addr-usdc">YOUR_ETH_ADDRESS</div>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="btn-copy" onclick="copyAddress('addr-usdc', this)">Copy address</button>
+                <a class="btn-wallet" href="ethereum:YOUR_ETH_ADDRESS">Open in wallet</a>
+                <button class="btn-qr" onclick="toggleQR(this, 'addr-usdc', 'qr-usdc')">Show QR code</button>
+            </div>
+            <div class="qr-wrap" id="qr-usdc"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-main">
+                <img class="logo" src="https://cryptologos.cc/logos/monero-xmr-logo.svg" alt="XMR" />
+                <div class="info">
+                    <div class="name">Monero <span class="ticker">XMR</span></div>
+                    <div class="address" id="addr-xmr">YOUR_XMR_ADDRESS</div>
+                </div>
+            </div>
+            <div class="card-actions">
+                <button class="btn-copy" onclick="copyAddress('addr-xmr', this)">Copy address</button>
+                <a class="btn-wallet" href="monero:YOUR_XMR_ADDRESS">Open in wallet</a>
+                <button class="btn-qr" onclick="toggleQR(this, 'addr-xmr', 'qr-xmr')">Show QR code</button>
+            </div>
+            <div class="qr-wrap" id="qr-xmr"></div>
+        </div>
+
+    </div>
 
     <footer>
         <p>Thank you! Every contribution helps keep Simple Notes free and private.</p>
@@ -85,6 +104,7 @@
 
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
 function copyAddress(id, btn) {
     const text = document.getElementById(id).textContent.trim();
@@ -92,10 +112,33 @@ function copyAddress(id, btn) {
         btn.textContent = 'Copied!';
         btn.classList.add('copied');
         setTimeout(function() {
-            btn.textContent = 'Copy';
+            btn.textContent = 'Copy address';
             btn.classList.remove('copied');
         }, 2000);
     });
+}
+
+function toggleQR(btn, addrId, qrId) {
+    const wrap = document.getElementById(qrId);
+    if (wrap.classList.contains('open')) {
+        wrap.classList.remove('open');
+        wrap.innerHTML = '';
+        btn.classList.remove('active');
+        btn.textContent = 'Show QR code';
+        return;
+    }
+    const address = document.getElementById(addrId).textContent.trim();
+    wrap.innerHTML = '';
+    new QRCode(wrap, {
+        text: address,
+        width: 160,
+        height: 160,
+        colorDark: '#000',
+        colorLight: '#fff',
+    });
+    wrap.classList.add('open');
+    btn.classList.add('active');
+    btn.textContent = 'Hide QR code';
 }
 </script>
 </body>
