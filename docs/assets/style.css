@@ -112,6 +112,18 @@ h2 {
     margin-bottom: 6px;
 }
 
+.crypto-network {
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent);
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
 .crypto-address {
     font-family: monospace;
     font-size: 0.78rem;
