@@ -18,15 +18,15 @@
 
         <div class="card">
             <div class="card-top">
-                <img class="logo" src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/btc.svg" alt="BTC" />
+                <img class="logo" src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/btc.svg" alt="BTC" width="44" height="44" />
                 <div class="card-info">
                     <div class="name">Bitcoin <span class="ticker">BTC</span></div>
-                    <div class="address" id="addr-btc">YOUR_BTC_ADDRESS</div>
+                    <div class="address" id="addr-btc">bc1qqte53saxrptzjsxpzfhltj5ecn70d7zg8vaxf7</div>
                 </div>
             </div>
             <div class="card-bottom">
                 <button class="btn btn-primary" onclick="copyAddress('addr-btc', this)">Copy address</button>
-                <a class="btn btn-secondary" href="bitcoin:YOUR_BTC_ADDRESS">Open in wallet</a>
+                <a class="btn btn-secondary" href="bitcoin:bc1qqte53saxrptzjsxpzfhltj5ecn70d7zg8vaxf7">Open in wallet</a>
                 <button class="btn btn-secondary" onclick="toggleQR(this, 'addr-btc', 'qr-btc')">Show QR</button>
             </div>
             <div class="qr-wrap" id="qr-btc"></div>
@@ -34,15 +34,31 @@
 
         <div class="card">
             <div class="card-top">
-                <img class="logo" src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/eth.svg" alt="ETH" />
+                <img class="logo" src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/xmr.svg" alt="XMR" width="44" height="44" />
+                <div class="card-info">
+                    <div class="name">Monero <span class="ticker">XMR</span></div>
+                    <div class="address" id="addr-xmr">4Azj27q9oxv7moSHAvmkD9QN11VvRg75tigveLMM3B27PGdeGCaCrPYffBZxMKMqfeERsH7iNdZkuS1yZ9yN1z8QFhSNmGd</div>
+                </div>
+            </div>
+            <div class="card-bottom">
+                <button class="btn btn-primary" onclick="copyAddress('addr-xmr', this)">Copy address</button>
+                <a class="btn btn-secondary" href="monero:4Azj27q9oxv7moSHAvmkD9QN11VvRg75tigveLMM3B27PGdeGCaCrPYffBZxMKMqfeERsH7iNdZkuS1yZ9yN1z8QFhSNmGd">Open in wallet</a>
+                <button class="btn btn-secondary" onclick="toggleQR(this, 'addr-xmr', 'qr-xmr')">Show QR</button>
+            </div>
+            <div class="qr-wrap" id="qr-xmr"></div>
+        </div>
+
+        <div class="card">
+            <div class="card-top">
+                <img class="logo" src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/eth.svg" alt="ETH" width="44" height="44" />
                 <div class="card-info">
                     <div class="name">Ethereum <span class="ticker">ETH</span></div>
-                    <div class="address" id="addr-eth">YOUR_ETH_ADDRESS</div>
+                    <div class="address" id="addr-eth">0x3F8BbE0d8C60eb7Ec6E16C899b836b175B65b9B4</div>
                 </div>
             </div>
             <div class="card-bottom">
                 <button class="btn btn-primary" onclick="copyAddress('addr-eth', this)">Copy address</button>
-                <a class="btn btn-secondary" href="ethereum:YOUR_ETH_ADDRESS">Open in wallet</a>
+                <a class="btn btn-secondary" href="ethereum:0x3F8BbE0d8C60eb7Ec6E16C899b836b175B65b9B4">Open in wallet</a>
                 <button class="btn btn-secondary" onclick="toggleQR(this, 'addr-eth', 'qr-eth')">Show QR</button>
             </div>
             <div class="qr-wrap" id="qr-eth"></div>
@@ -50,15 +66,15 @@
 
         <div class="card">
             <div class="card-top">
-                <img class="logo" src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/usdt.svg" alt="USDT" />
+                <img class="logo" src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/usdt.svg" alt="USDT" width="44" height="44" />
                 <div class="card-info">
                     <div class="name">Tether <span class="ticker">USDT</span> <span class="badge">ERC-20</span></div>
-                    <div class="address" id="addr-usdt">YOUR_ETH_ADDRESS</div>
+                    <div class="address" id="addr-usdt">0x3F8BbE0d8C60eb7Ec6E16C899b836b175B65b9B4</div>
                 </div>
             </div>
             <div class="card-bottom">
                 <button class="btn btn-primary" onclick="copyAddress('addr-usdt', this)">Copy address</button>
-                <a class="btn btn-secondary" href="ethereum:YOUR_ETH_ADDRESS">Open in wallet</a>
+                <a class="btn btn-secondary" href="ethereum:0x3F8BbE0d8C60eb7Ec6E16C899b836b175B65b9B4">Open in wallet</a>
                 <button class="btn btn-secondary" onclick="toggleQR(this, 'addr-usdt', 'qr-usdt')">Show QR</button>
             </div>
             <div class="qr-wrap" id="qr-usdt"></div>
@@ -66,34 +82,18 @@
 
         <div class="card">
             <div class="card-top">
-                <img class="logo" src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/usdc.svg" alt="USDC" />
+                <img class="logo" src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/usdc.svg" alt="USDC" width="44" height="44" />
                 <div class="card-info">
                     <div class="name">USD Coin <span class="ticker">USDC</span> <span class="badge">ERC-20</span></div>
-                    <div class="address" id="addr-usdc">YOUR_ETH_ADDRESS</div>
+                    <div class="address" id="addr-usdc">0x3F8BbE0d8C60eb7Ec6E16C899b836b175B65b9B4</div>
                 </div>
             </div>
             <div class="card-bottom">
                 <button class="btn btn-primary" onclick="copyAddress('addr-usdc', this)">Copy address</button>
-                <a class="btn btn-secondary" href="ethereum:YOUR_ETH_ADDRESS">Open in wallet</a>
+                <a class="btn btn-secondary" href="ethereum:0x3F8BbE0d8C60eb7Ec6E16C899b836b175B65b9B4">Open in wallet</a>
                 <button class="btn btn-secondary" onclick="toggleQR(this, 'addr-usdc', 'qr-usdc')">Show QR</button>
             </div>
             <div class="qr-wrap" id="qr-usdc"></div>
-        </div>
-
-        <div class="card">
-            <div class="card-top">
-                <img class="logo" src="https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/xmr.svg" alt="XMR" />
-                <div class="card-info">
-                    <div class="name">Monero <span class="ticker">XMR</span></div>
-                    <div class="address" id="addr-xmr">YOUR_XMR_ADDRESS</div>
-                </div>
-            </div>
-            <div class="card-bottom">
-                <button class="btn btn-primary" onclick="copyAddress('addr-xmr', this)">Copy address</button>
-                <a class="btn btn-secondary" href="monero:YOUR_XMR_ADDRESS">Open in wallet</a>
-                <button class="btn btn-secondary" onclick="toggleQR(this, 'addr-xmr', 'qr-xmr')">Show QR</button>
-            </div>
-            <div class="qr-wrap" id="qr-xmr"></div>
         </div>
 
     </div>
